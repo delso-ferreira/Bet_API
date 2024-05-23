@@ -38,7 +38,7 @@ public class BetRepository : IBetRepository
         _context.Bets.Add(newBet);
         _context.SaveChanges();
 
-        Bet createdBet = _context.Bets.Include(b => b.Team).Include(b => b.Match).Where(b => b.BetId == newBet.BetId).FirstOrDefault()!;
+        Bet betCreation = _context.Bets.Include(b => b.Team).Include(b => b.Match).Where(b => b.BetId == newBet.BetId).FirstOrDefault()!;
         
         if (findedMatch.MatchTeamAId == betRequest.TeamId) findedMatch.MatchTeamAValue += betRequest.BetValue;
         else findedMatch.MatchTeamBValue += betRequest.BetValue;
@@ -47,13 +47,13 @@ public class BetRepository : IBetRepository
 
         return new BetDTOResponse
         {
-            BetId = createdBet.BetId,
-            MatchId = createdBet.MatchId,
-            TeamId = createdBet.TeamId,
-            BetValue = createdBet.BetValue,
-            MatchDate = createdBet.Match!.MatchDate,
-            TeamName = createdBet.Team!.TeamName,
-            Email = createdBet.User!.Email
+            BetId = betCreation.BetId,
+            MatchId = betCreation.MatchId,
+            TeamId = betCreation.TeamId,
+            BetValue = betCreation.BetValue,
+            MatchDate = betCreation.Match!.MatchDate,
+            TeamName = betCreation.Team!.TeamName,
+            Email = betCreation.User!.Email
         };
     }
     public BetDTOResponse Get(int BetId, string email)
