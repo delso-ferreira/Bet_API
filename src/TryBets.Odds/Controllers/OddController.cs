@@ -28,5 +28,6 @@ public class OddController : Controller
        {
            return BadRequest(ex.Message);
        }
+       
     }
 }
