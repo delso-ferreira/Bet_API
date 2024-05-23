@@ -6,7 +6,6 @@ using System.Security.Claims;
 using TryBets.Repository;
 using TryBets.DTO;
 
-//init
 
 namespace TryBets.Controllers;
 
