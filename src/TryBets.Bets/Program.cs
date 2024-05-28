@@ -58,7 +58,7 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("Client", policy => policy.RequireClaim(ClaimTypes.Email));
 });
 
-builder.WebHost.UseUrls($"http://+:5503");
+builder.WebHost.UseUrls($"http://localhost:5503");
 
 var app = builder.Build();
 
