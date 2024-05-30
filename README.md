@@ -1,13 +1,13 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Bet_API 💰 🎮 ↗️
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+Esse é um projeto feito no decorrer do curso de desenvolvimento web pela Trybe.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+É uma aplicação monolítica desenvolvida com alguns microsserviços separando rotas específicas em uma aplicação separada.
+
+Esse projeto consiste no backend de um site de apostas. Onde, as lógicas  que está pronto, e dividí-lo em microsserviços com determinadas especificidades. O software consiste em uma API responsável por lidar com determinados serviços em um site de apostas de jogos. O software possui 04 entidades (models) principais: Users, Teams, Matches e Bets.
+
+Esta API tem apenas realiza o fluxo inicial de cadasto, permite autenticação, fornecer informações de times e partidas, realizar as apostas e atualiza as odds que são dinâmicas baseadas no valor apostado em cada time. Este site de apostas possui as odds (razão de ganho em uma aposta) atualizadas dinamicamente e não possui fins lucrativos, ou seja, o valor das apostas são inteiramente devolvidos às pessoas usuárias que apostaram.
+
+Fluxos relacionados ao cadastro e atualização de times e partidas, tal como o pagamento de apostas premiadas não são realizados por essa API. Portanto, essas rotas e funcionalidades não existem e não existirão nos microsserviços.
+
+O desenvolvimento dos Dockerfiles de seus microsserviços, tanto como as lógicas nas Controllers, Repository e nos DTO foram feitos por [Delso Ferreira](https://github.com/delso-ferreira) , com foco em CI/DC, para futuramente construir a imagem dos mesmos e ter containers separados para cada microsserviço e um compose da aplicação completa.
